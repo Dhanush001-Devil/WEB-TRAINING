@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+.left-section {
+    flex: 2;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.right-section {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.header img {
+    height: 30px;
+}
+.header a {
+    text-decoration: none;
+    color: #000;
+}
+h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.promo-section {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+.promo-section input {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.promo-section button {
+    width: 25%;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.promo-options {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.promo-options button {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.promo-options button.active {
+    background-color: #ff0000;
+    color: #fff;
+}
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.bag-item {
+    display: flex;
+    gap: 15px;
+    padding: 15px 0;
+    border-top: 1px solid #ddd;
+}
+.bag-item img {
+    width: 80px;
+    height: 100px;
+    object-fit: cover;
+}
+.bag-item-details {
+    flex: 1;
+}
+.bag-item-details h4 {
+    margin: 0;
+    font-size: 14px;
+}
+.bag-item-details p {
+    margin: 5px 0;
+    font-size: 12px;
+    color: #666;
+}
+.bag-item-actions {
+    display: flex;
+    gap: 10px;
+}
+.bag-item-actions a {
+    text-decoration: none;
+    color: #000;
+    font-size: 12px;
+}
