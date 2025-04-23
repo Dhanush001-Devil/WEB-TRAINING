@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height:1.5;
+}
+
+.gen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:white;
+    width:25%;
+    margin-top:3%;
+    margin-left:35%;
+    border-radius:20px;
+    padding:5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1{
+    font-size: 25px;
+    margin-bottom: 10px;
+    text-align: center;
+    color:crimson;
+}
+
+h2{
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+    color:black;
+}
+
+.otp{
+    margin-bottom:15px;
+    padding:5px;
+    border-radius:10px;
+    background-color:crimson;
+    color:white;
+    font-size: 20px;
+    border-style:none;
+}
+
+input[type="text"]{
+    font-size: 20px;
+    margin-right: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom:10px;
+    width:50%;
+}
+
+.container input[type="checkbox"]{
+    margin-right: 5px;
+    padding-left:5%;
+}
+
+.password{
+    margin-right: 20%;
+}
+
+.copy{
+    padding:5px 10px;
+    background-color: crimson;
+    color:white;
+    border-style: solid;
+    flex-grow:1;
+    margin-right: 10px;
+}
+
+#passwords{
+    align-content: center;
+    width:10%;
+    margin-left:50%;
+    margin-top:-6%;
+    height:5%;
+
+}
+#numbers{
+    margin-left:51px;
+}
+
+#symbols{
+    margin-left:52px;
+    margin-bottom: 15px;
+}
+
+.verify{
+    padding:5px;
+    margin-bottom:10px;
+    border-radius:10px;
+    background-color:crimson;
+    color:white;
+    font-size: 20px;
+    border-style: solid;
+}
+
+.success {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .error {
+    color: red;
+    font-weight: bold;
+  }
+  

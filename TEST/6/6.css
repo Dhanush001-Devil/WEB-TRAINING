@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: url("japanese art.jpeg"), linear-gradient(to right, #f9f9f9, #f1f1f1);
+  background-repeat: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+  gap: 30px;
+  flex-wrap: wrap;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background: url("japanese art.jpeg"), linear-gradient(to right, #1e1e1e, #2c2c2c);
+  background-repeat: none;
+  color: #fff;
+}
+
+.phone {
+  width: 300px;
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode .phone {
+  background: #333;
+  color: #fff;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.header h2 {
+  font-size: 18px;
+}
+
+.header h2 span {
+  color: #ff4d4f;
+}
+
+.task-box, .task-item {
+  background: #f8f8f8;
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+body.dark-mode .task-box, body.dark-mode .task-item {
+  background: #444;
+}
+
+.progress {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.progress.red { color: #ff4d4f; }
+.progress.green { color: #28a745; }
+.progress.yellow { color: #ffc107; }
+
+.btn {
+  display: inline-block;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #007bff;
+  color: white;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.form-section h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  margin-bottom: 12px;
+}
+
+.form-group label {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #000;
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea {
+  background: #555;
+  color: #fff;
+  border: 1px solid #666;
+}
+
+.priority-group button {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: none;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.priority-high { background: #ff4d4f; color: white; }
+.priority-medium { background: #ffc107; color: white; }
+.priority-low { background: #28a745; color: white; }
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.btn-secondary { background: #6c757d; color: white; }
+.btn-success { background: #28a745; color: white; }
+.btn-warning { background: #ffc107; color: white; }
+
+.toggle-mode {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 999;
+}

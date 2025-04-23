@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8fafc;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #4a90e2;
+}
+
+.order-summary {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+aside {
+    width: 250px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    display: flex;
+}
+
+.explore-section {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.discount-banner {
+    background-color: #e7ffeb;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    flex-basis: calc(33% - 20px);
+}
+
+.bold-fashion {
+    margin-top: 20px;
+    background-color: #fff7e6;
+    padding: 15px;
+    border-radius: 8px;
+}

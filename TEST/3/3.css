@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("https://unbounce.com/photos/Gradient-Background-1536x1016.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.logo h1{
+    color: black;
+    font-size: 50PX;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+    margin-left: 10px;
+    margin-right: 10px;
+    align-items: center;
+}
+.but button{
+    font-size: 15px;
+    color:black;
+    background-color: rgb(255, 255, 255);
+    padding: 2px 5px;
+}
+
+nav a:hover{
+    color: red;
+    background-color:black;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+.cont{
+    margin-left: 90px;
+    margin-top: 200px;
+}
+.ni{
+    color: rgb(12, 12, 12);
+    font-size: 20px;
+}
+.name{
+    color: black;
+    font-size: 45px;
+}
+.des{
+    color: #111111bd;
+    font-size: 18px;
+}
+.bu button{
+    font-size: 24px;
+    margin-top: 40px;
+    color: black;
+    background-color: rgb(236, 235, 243);
+    border-radius: 4px;
+    padding: 5px 10px;
+    border: none;
+    font-family:sans-serif;
+    
+}
+.bu button:hover{
+    border: none;
+    color: rgb(14, 13, 13) ;
+    background-color: rgb(255, 123, 0);
+}
+.cont{
+    display: flex;
+}
+
+.right{
+    margin-left: 100px;
+    margin-bottom: 200px;  
+}

@@ -1,0 +1,222 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background-image: url('bus stand.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px;
+      gap: 30px;
+      min-height: 100vh;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      width: 350px;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header, .travel-header {
+      background: linear-gradient(135deg, #ff2e63, #c3002f);
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+
+    .header h2, .travel-header h3 {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .form, .travel-detail {
+      padding: 20px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      background: #f9f9f9;
+      font-size: 14px;
+      transition: border 0.3s ease;
+    }
+
+    input[type="text"]:focus {
+      border: 2px solid #c3002f;
+      outline: none;
+    }
+
+    .calendar-wrapper {
+      background: #f5f5f5;
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .calendar-header {
+      font-size: 12px;
+      color: #c3002f;
+      font-weight: bold;
+    }
+
+    .calendar-date {
+      font-weight: bold;
+      font-size: 18px;
+      margin: 5px 0;
+      color: #333;
+    }
+
+    .calendar-days {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 10px 0;
+    }
+
+    .calendar-days span {
+      padding: 5px 10px;
+      border-radius: 8px;
+      background: #eee;
+      cursor: pointer;
+      font-size: 13px;
+      transition: transform 0.2s;
+    }
+
+    .calendar-days span:hover {
+      transform: scale(1.05);
+    }
+
+    .calendar-days .active {
+      background: #c3002f;
+      color: white;
+      font-weight: bold;
+    }
+
+    .seats-selector {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .seats-selector span {
+      flex: 1 1 20%;
+      background: #f3f3f3;
+      padding: 8px;
+      text-align: center;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .seats-selector span:hover {
+      background: #ddd;
+    }
+
+    .seats-selector .active {
+      background: #c3002f;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .proceed-btn {
+      width: 100%;
+      background: #c3002f;
+      color: #fff;
+      font-weight: bold;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 25px;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 10px;
+      transition: background 0.3s;
+    }
+
+    .proceed-btn:hover {
+      background: #a80026;
+    }
+
+    .recent {
+      background: #fafafa;
+      text-align: center;
+      padding: 10px;
+      color: #c3002f;
+      font-weight: 600;
+      font-size: 14px;
+      border-top: 1px solid #eee;
+    }
+
+    .travel-header .date {
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    .seats-box {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #fff;
+      color: #c3002f;
+      border-radius: 20px;
+      padding: 5px 15px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .option {
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .option .top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .option .middle {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #555;
+    }
+
+    .book-btn {
+      margin-top: 10px;
+      text-align: center;
+      background: #c3002f;
+      color: white;
+      padding: 8px 0;
+      font-weight: bold;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+
+    .book-btn:hover {
+      background: #a80026;
+    }

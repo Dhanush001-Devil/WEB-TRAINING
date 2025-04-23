@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, sans-serif;
+  }
+
+  body {
+    margin: 0;
+    padding: 20px;
+    background-color: #f7f5f3;
+    color: #333;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .left, .right {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .left {
+    flex: 2;
+    min-width: 300px;
+  }
+
+  .right {
+    flex: 1;
+    min-width: 280px;
+  }
+
+  h2, h3 {
+    margin-top: 0;
+  }
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+
+  .half {
+    width: 48%;
+  }
+
+  .full {
+    width: 100%;
+  }
+
+  .summary {
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+  }
+
+  .summary div {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+
+  .summary .total {
+    font-weight: bold;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #2e7062;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+  .item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .item span {
+    font-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+    .half {
+      width: 100%;
+    }
+  }

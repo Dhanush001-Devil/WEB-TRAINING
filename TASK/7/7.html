@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>GENERATOR</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="7.css" rel="stylesheet">
+</head>
+<body>
+<div class="gen" style="display: inline-flex ;">
+    <h1>PASSWORD GENERATOR</h1>
+    <h2>- - - - - -</h2>  
+    <button class="otp">Password Generator </button>
+    <input type="text" placeholder="Enter Password">
+    <button class="copy">Copy</button>
+
+    <label class="password">Password Length</label>
+    <input type="text" id="passwords">
+
+<div class="container">Include uppercase letters
+ <input type="checkbox" id="uppercase"  check >
+ <span class="checkmark"></span>
+</div>
+    
+<div class="container">Include lowercase letters
+  <input type="checkbox" id="lowercase" check>
+  <span class="checkmark"></span>
+ </div>
+
+ <div class="container">Include numbers 
+  <input type="checkbox" id="numbers" check>
+  <span class="checkmark"></span>
+ </div>
+
+ <div class="container">Include symbols 
+  <input type="checkbox" id="symbols" check>
+  <span class="checkmark"></span>
+ </div>
+    <button class="verify">Verify Password</button>
+    <p id="message"></p>
+</div>
+<script>
+  const upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const lower = "abcdefghijklmnopqrstuvwxyz";
+  const nums = "0123456789";
+  const symbols = "!@#$%^&*()_+{}[]<>?";
+
+  const generateBtn = document.getElementsByClassName("otp")[0];
+  const verifyBtn = document.getElementsByClassName("verify")[0];
+  const copyBtn = document.getElementsByClassName("copy")[0];
+  const passwordOutput = document.getElementsByTagName("input")[0]; // Assuming it's the password input
+  const lengthInput = document.getElementById("passwords");
+  const message = document.getElementById("message");
+  const h2Display = document.getElementsByTagName("h2")[0];
+
+  const uppercaseCheckbox = document.getElementById("uppercase");
+  const lowercaseCheckbox = document.getElementById("lowercase");
+  const numbersCheckbox = document.getElementById("numbers");
+  const symbolsCheckbox = document.getElementById("symbols");
+
+  generateBtn.addEventListener("click", () => {
+    let length = parseInt(lengthInput.value);
+    if (isNaN(length) || length < 4) {
+      alert("Please enter a valid password length (minimum 4)");
+      return;
+    }
+
+    let charset = "";
+    if (uppercaseCheckbox.checked) charset += upper;
+    if (lowercaseCheckbox.checked) charset += lower;
+    if (numbersCheckbox.checked) charset += nums;
+    if (symbolsCheckbox.checked) charset += symbols;
+
+    if (charset.length === 0) {
+      alert("Please select at least one character type.");
+      return;
+    }
+
+    let password = "";
+    for (let i = 0; i < length; i++) {
+      let randomIndex = Math.floor(Math.random() * charset.length);
+      password += charset[randomIndex];
+    }
+
+    passwordOutput.value = password;
+    h2Display.textContent = password;
+    message.textContent = "";
+  });
+
+  verifyBtn.addEventListener("click", () => {
+    const password = passwordOutput.value;
+    const errors = [];
+
+    if (uppercaseCheckbox.checked && !/[A-Z]/.test(password)) {
+      errors.push("Missing uppercase letter.");
+    }
+    if (lowercaseCheckbox.checked && !/[a-z]/.test(password)) {
+      errors.push("Missing lowercase letter.");
+    }
+    if (numbersCheckbox.checked && !/[0-9]/.test(password)) {
+      errors.push("Missing number.");
+    }
+    if (symbolsCheckbox.checked && !/[!@#$%^&*()_+{}\[\]<>?]/.test(password)) {
+      errors.push("Missing symbol.");
+    }
+    if (password.length < parseInt(lengthInput.value)) {
+      errors.push("Password is shorter than required length.");
+    }
+
+    if (errors.length > 0) {
+      message.innerHTML = `<span class="error">${errors.join("<br>")}</span>`;
+    } else {
+      message.innerHTML = `<span class="success">Password is valid ✅</span>`;
+    }
+  });
+
+  copyBtn.addEventListener("click", () => {
+    const password = passwordOutput.value;
+    if (!password) {
+      alert("Nothing to copy! Please generate a password first.");
+      return;
+    }
+
+    navigator.clipboard.writeText(password).then(() => {
+      message.innerHTML = `<span class="success">Password copied to clipboard ✅</span>`;
+    }).catch(() => {
+      alert("Failed to copy password.");
+    });
+  });
+</script>
+
+</body>
+</html>
+
+

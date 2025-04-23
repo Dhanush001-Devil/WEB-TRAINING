@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHECKOUT PAGE</title>
+    <link rel="stylesheet" href="1.css" />
+  
+    </head>
+
+    <body>
+        <div class="header">
+            <img src="https://via.placeholder.com/30" alt="CHECKOUT">
+            <div>
+                <a href="#">HAVE AN ACCOUNT?</a> | <a href="#">LOGIN</a>
+            </div>
+        </div>
+    
+        <div class="container">
+            <!-- Left Section: Shipping -->
+            <div class="left-section">
+                <h2>SHIPPING</h2>
+                <div class="form-group">
+                    <label>SHIPPING ADDRESS</label>
+                    <div style="display: flex; gap: 10px;">
+                        <input type="text" placeholder="First Name *" required>
+                        <input type="text" placeholder="Last Name *" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Street Address *" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Apt./Suite/Unit (Optional)">
+                </div>
+                <div class="form-group">
+                    <div style="display: flex; gap: 10px;">
+                        <input type="text" placeholder="City *" required>
+                        <select required>
+                            <option value="">Province *</option>
+                            <option value="ON">TAMIL NADU</option>
+                            <option value="BC">KERALA</option>
+                            <option value="BC">KARANATAKA</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Postal Code *" required>
+                </div>
+    
+                <h2>SHIPPING METHOD</h2>
+                <p>Enter a shipping address to see available shipping options for your order.</p>
+    
+                <h2>GIFT OPTIONS</h2>
+            </div>
+    
+            <!-- Right Section: Order Summary -->
+            <div class="right-section">
+                <h2>ORDER SUMMARY</h2>
+                <div class="summary-item">
+                    <span>Subtotal</span>
+                    <span>$37.49 CDN</span>
+                </div>
+                <div class="summary-item">
+                    <span>Taxes</span>
+                    <span>-</span>
+                </div>
+                <div class="summary-item">
+                    <span>Shipping (1 item)</span>
+                    <span>-</span>
+                </div>
+                <div class="summary-item" style="font-weight: bold;">
+                    <span>TOTAL</span>
+                    <span>$37.49 CDN</span>
+                </div>
+    
+                <div class="promo-section">
+                    <label>Apply a Promo Code or Discount (one per order)</label>
+                    <div style="display: flex; gap: 10px;">
+                        <input type="text" placeholder="PROMO CODE">
+                        <button>APPLY</button>
+                    </div>
+                    <div class="promo-options">
+                        <button class="active">Troop</button>
+                        <button>ID</button>
+                        <button>Responder</button>
+                    </div>
+                </div>
+    
+                <h2>BAG SUMMARY</h2>
+                <p>Arrives in 4-7 days</p>
+                <div class="bag-item">
+                    <img src="https://via.placeholder.com/80x100" alt="Product Image">
+                    <div class="bag-item-details">
+                        <h4>Men's UA Hustle Fleece Hoodie</h4>
+                        <p>1300123-025-0XL</p>
+                        <p>Light Grey, 0XL</p>
+                        <p>$40.59 CDN $37.49 CDN x 1</p>
+                    </div>
+                    <div class="bag-item-actions">
+                        <a href="#">EDIT</a>
+                        <a href="#">REMOVE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>

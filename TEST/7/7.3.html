@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bus Booking UI</title>
+  <link href="7.3.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Left Card -->
+  <div class="card">
+    <div class="header">
+      <h2>Select your destination</h2>
+    </div>
+    <div class="form">
+      <input type="text" placeholder="From">
+      <input type="text" placeholder="To">
+      <div class="calendar-wrapper">
+        <div class="calendar-header">TODAY</div>
+        <div class="calendar-date">28 Dec, 2016</div>
+        <div class="calendar-days">
+          <span>28</span>
+          <span>29</span>
+          <span class="active">30</span>
+        </div>
+      </div>
+      <div class="seats-selector">
+        <span>1</span><span>2</span><span class="active">4</span><span>5</span><span>6</span><span>7</span><span>8</span>
+      </div>
+      <button class="proceed-btn">PROCEED</button>
+    </div>
+    <div class="recent">RECENT BOOKING</div>
+  </div>
+
+  <!-- Right Card -->
+  <div class="card">
+    <div class="travel-header">
+      <h3>BLR <span style="font-size: 18px;">🚌</span> PNY</h3>
+      <div class="date">29 Dec 2016</div>
+    </div>
+    <div class="travel-detail">
+      <div class="option">
+        <div class="top">
+          <span>VRL</span>
+          <span>10:30 PM ➝ 06:30 AM</span>
+          <span>INR 1,400</span>
+        </div>
+        <div class="middle">
+          <span>Sleeper | AC</span>
+          <span>12 Available Seats</span>
+        </div>
+        <div class="book-btn">BOOK NOW</div>
+      </div>
+
+      <div class="option">
+        <div class="top">
+          <span>GreenLine</span>
+          <span>09:30 PM ➝ 05:30 AM</span>
+          <span>INR 1,500</span>
+        </div>
+        <div class="middle">
+          <span>Sleeper | AC</span>
+          <span>2 Available Seats</span>
+        </div>
+        <div class="book-btn">BOOK NOW</div>
+      </div>
+
+      <div class="option">
+        <div class="top">
+          <span>KPN</span>
+          <span>10:30 PM ➝ 06:30 AM</span>
+          <span>INR 980</span>
+        </div>
+        <div class="middle">
+          <span>Sleeper | Non-AC</span>
+          <span>5 Available Seats</span>
+        </div>
+        <div class="book-btn">BOOK NOW</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

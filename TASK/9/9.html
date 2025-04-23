@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Currency Converter</title>
+    <style>
+        body {
+            display:flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f9;
+            text-align: center;
+        }
+        input, select, button {
+           display:flex;
+           flex-direction: column;
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+        button {
+            display:flex;
+            flex-direction: column;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Currency Converter</h2>
+
+    <label for="amount">Amount:</label>
+    <input type="number" id="amount" placeholder="Enter amount">
+
+    <label for="fromCurrency">From:</label>
+    <select id="fromCurrency">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="INR">INR</option>
+        <option value="GBP">GBP</option>
+    </select>
+
+    <label for="toCurrency">To:</label>
+    <select id="toCurrency">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="INR">INR</option>
+        <option value="GBP">GBP</option>
+    </select>
+
+    <button onclick="convertCurrency()">Convert</button>
+
+    <div id="result"></div>
+
+    <script>
+        const exchangeRates = {
+            'USD': { 'EUR': 0.93, 'INR': 83.50, 'GBP': 0.75 },
+            'EUR': { 'USD': 1.08, 'INR': 89.90, 'GBP': 0.81 },
+            'INR': { 'USD': 0.012, 'EUR': 0.011, 'GBP': 0.009 },
+            'GBP': { 'USD': 1.22, 'EUR': 1.24, 'INR': 104.20 }
+        };
+
+        function convertCurrency() {
+            const amount = parseFloat(document.getElementById('amount').value);
+            const fromCurrency = document.getElementById('fromCurrency').value;
+            const toCurrency = document.getElementById('toCurrency').value;
+
+            if (isNaN(amount) || amount <= 0) {
+                document.getElementById('result').innerText = 'Please enter a valid amount.';
+                return;
+            }
+
+            if (fromCurrency === toCurrency) {
+                document.getElementById('result').innerText = 'Please select different currencies.';
+                return;
+            }
+
+            const rate = exchangeRates[fromCurrency][toCurrency];
+            const convertedAmount = (amount * rate).toFixed(2);
+
+            document.getElementById('result').innerText = `${amount} ${fromCurrency} = ${convertedAmount} ${toCurrency}`;
+        }
+    </script>
+
+</body>
+</html>
