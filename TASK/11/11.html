@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title>ZEPTO</title> 
+</head>
+<body>
+    <style>
+        *{
+            box-sizing:border-box;
+            padding:0;
+            margin:0;
+        }
+
+        .mini{
+            background-color: blue;
+            color:black;
+            display:flex;
+            justify-content: center;
+            margin-top:3%;
+        }
+
+        .navi{
+            display: flex;
+            justify-content: space-evenly;  
+        }
+
+        .optsc{
+            display:flex;
+            gap:2%;
+        }
+
+.proca{
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 2%;
+        }
+
+        #appl{
+            border: 1px solid black;
+            padding: 10px;
+            width: 200px;
+            text-align: center;
+        }
+
+        .add{
+            background-color: blue;
+            color:white;
+            border:none;
+            padding:5px 10px;
+            cursor:pointer;
+        }
+
+        .add:hover{
+            background-color: darkblue;
+            transition: 0.3s;
+}
+    </style>
+</body>
+<body>
+    <div class="mini">
+        <h1>Mini Zepto Shop</h1>
+    </div>  
+    <nav class="navi">
+        <p>Products</p>
+        <p>Cart</p>
+        <p>Checkout</p>
+    </nav>
+    <h2><strong>Products</strong></h2>
+    
+    <div class="optsc">
+        <input type="text" placeholder="Search products">
+        <select>
+            <option>All categories</option>
+            <option>Fruit</option>
+            <option>Vegetable</option>
+            <option>Dairy</option>
+        </select>
+
+        <select>
+            <option>Sort by</option>
+        </select>
+    </div>
+    <div class="proca">
+        <div id="appl">
+            <p>Fresh Apple</p>
+            <p>₹120</p>
+            <button class="add">Add to Cart</button>
+        </div>
+
+        <div id="appl">
+            <p>Tomato(1kg)</p>
+            <p>₹30</p>
+            <button class="add">Add to Cart</button>
+        </div>
+
+        <div id="appl">
+            <p>Milk(1L)</p>
+            <p>₹45</p>
+            <button class="add">Add to Cart</button>
+        </div>  
+
+        <div id="appl">
+            <p>Bread</p>
+            <p>₹35</p>                  
+            <button class="add">Add to Cart</button>
+        </div>
+    </div>
+    <script>
+
+    </script>
+</body>
+</html>

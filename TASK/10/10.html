@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Book</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    input, button {
+      padding: 10px;
+      margin: 5px 0;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .contact {
+      background: #e6f7ff;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .contact span {
+      display: block;
+    }
+    .delete-btn {
+      background: #ff4d4d;
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .delete-btn:hover {
+      background: #e60000;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📇 Contact Book</h1>
+  <div class="container">
+    <input type="text" id="name" placeholder="Contact Name">
+    <input type="text" id="phone" placeholder="Phone Number">
+    <input type="email" id="email" placeholder="Email Address">
+    <button onclick="addContact()">Add Contact</button>
+    <div id="contactList"></div>
+  </div>
+
+  <script>
+    const contacts = [];
+
+    function addContact() {
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const email = document.getElementById('email').value.trim();
+      if (name && phone && email) {
+        contacts.push({ name, phone, email });
+        document.getElementById('name').value = '';
+        document.getElementById('phone').value = '';
+        document.getElementById('email').value = '';
+        renderContacts();
+      } else {
+        alert("Please fill in all fields.");
+      }
+    }
+
+    function renderContacts() {
+      const contactList = document.getElementById('contactList');
+      contactList.innerHTML = '';
+      contacts.forEach((contact, index) => {
+        const contactDiv = document.createElement('div');
+        contactDiv.className = 'contact';
+        contactDiv.innerHTML = `
+          <div>
+            <strong>${contact.name}</strong><br>
+            <span>📞 ${contact.phone}</span><br>
+            <span>✉️ ${contact.email}</span>
+          </div>
+          <button class="delete-btn" onclick="deleteContact(${index})">Delete</button>
+        `;
+        contactList.appendChild(contactDiv);
+      });
+    }
+
+    function deleteContact(index) {
+      contacts.splice(index, 1);
+      renderContacts();
+    }
+  </script>
+
+</body>
+</html>
